@@ -2,12 +2,11 @@
 Buku "Rahasia Dibalik Lima Angka" 
 
 Anggota Kelompok 
-
-Riska Rafiela Muslimah : 
-Fajar Kurnia Rohman :
-Rizki Aqdam Kurnia :
-Ady Chandra :
-Aset Mulyadi :
+1. Ady Chandra :
+2. Aset Mulyadi :
+3. Fajar Kurnia Rohman :
+4. Riska Rafiela Muslimah :
+5. Rizqi Akdam Kurnia :
 
 MILESTONE 1 — Pengumpulan & Kurasi Materi (Satu Kali Saja)
 Tujuan: Semua referensi terkumpul sebelum mulai menulis atau ngoding.
