@@ -12,137 +12,86 @@ d. Daftar isi
 Bab per bab (chapter) dengan subjudul konsisten
 a. Lampiran (jika ada data)
 b. Glosarium
+c. Daftar pustaka
+d. Indeks (opsional)
 
-Daftar pustaka
-
-Indeks (opsional)
-
-➡️ Buku SIG kamu sudah pakai format ini — sangat sesuai.
-
-2️⃣ Bahasa harus jelas, objektif, tidak ambigu
-
+2️. Bahasa harus jelas, objektif, tidak ambigu
 Pedoman UNESCO:
-
-Gunakan kalimat pendek, langsung, dan tidak bertele-tele
-
-Hindari istilah teknis tanpa penjelasan
-
-Gunakan bahasa netral dan tidak bias
+a. Gunakan kalimat pendek, langsung, dan tidak bertele-tele
+b. Hindari istilah teknis tanpa penjelasan
+c. Gunakan bahasa netral dan tidak bias
 
 Satu istilah = satu makna, konsisten di seluruh bab
 (misal pakai “kode pos”, jangan kadang pakai “poskode”)
 
-3️⃣ Setiap data harus dapat ditelusuri (traceable)
-
+3️. Setiap data harus dapat ditelusuri (traceable)
 UNESCO menekankan:
-
-Jika menyebut angka, grafik, peta → sebutkan sumbernya
-
-Jika memproses data SIG, sebutkan:
-
-sumber data
-
-metode (buffer, join, overlay, dll)
-
-perangkat (QGIS / ArcGIS)
+a. Jika menyebut angka, grafik, peta → sebutkan sumbernya
+b. Jika memproses data SIG, sebutkan:
+c. sumber data
+d. metode (buffer, join, overlay, dll)
+e. perangkat (QGIS / ArcGIS)
 
 ➡️ Ini penting untuk bab metodologi pemetaan kode pos.
 
-4️⃣ Sitasi & Daftar Pustaka harus standar
-
+4️. Sitasi & Daftar Pustaka harus standar
 UNESCO membolehkan beberapa format, tetapi menganjurkan:
 
-APA style
-atau
-
-Chicago style
+APA style | Chicago style
 
 Aturannya:
+1. Sitasi dalam teks harus konsisten
+2. Semua sumber yang disebut di bab harus muncul di daftar pustaka
+3. Hindari sumber tidak kredibel
 
-Sitasi dalam teks harus konsisten
-
-Semua sumber yang disebut di bab harus muncul di daftar pustaka
-
-Hindari sumber tidak kredibel
-
-5️⃣ Gambar, Peta, dan Tabel harus diberi keterangan lengkap
-
+5️. Gambar, Peta, dan Tabel harus diberi keterangan lengkap
 UNESCO meminta:
-
-Judul
-
-Nomor gambar/tabel
-
-Sumber data
-
-Tahun data
-
-Penjelasan singkat
-
+a. Judul
+b. Nomor gambar/tabel
+c. Sumber data
+d. Tahun data
+e. Penjelasan singkat
 Contoh:
 Gambar 2.1. Peta Sebaran Kode Pos Kecamatan Bandung (2024). Sumber: Data Pos Indonesia, diolah penulis menggunakan QGIS.
 
-6️⃣ Hak cipta (copyright) harus jelas
-
+6️. Hak cipta (copyright) harus jelas
 UNESCO menganjurkan:
-
-Hindari mengambil peta, foto, atau tabel dari sumber berhak cipta tanpa izin
+a. Hindari mengambil peta, foto, atau tabel dari sumber berhak cipta tanpa izin
 
 Jika memakai data resmi (misal Pos Indonesia / BPS), wajib mencantumkan:
 “Sumber: …, digunakan untuk tujuan edukasi”
 
-7️⃣ Standardisasi istilah & format
-
+7️. Standardisasi istilah & format
 UNESCO menetapkan:
+a. Gunakan format tetap untuk:
+    - judul bab
+    - subjudul
+    - penomoran gambar
+    - penomoran tabel
+    - penomoran lampiran
+    - penulisan poin
+b. Gunakan glosarium jika buku banyak istilah baru
 
-Gunakan format tetap untuk:
-
-judul bab
-
-subjudul
-
-penomoran gambar
-
-penomoran tabel
-
-penomoran lampiran
-
-penulisan poin
-
-Gunakan glosarium jika buku banyak istilah baru
-
-8️⃣ Layout yang mudah dibaca
+8️. Layout yang mudah dibaca
 
 Rekomendasi UNESCO:
+1. Margin standar (2–2.5 cm)
+2. Jenis huruf mudah dibaca (Times New Roman / Arial / Calibri)
+3. Ukuran 11–12 pt untuk isi
+4. Spasi 1.15 – 1.5
+5. Hindari paragraf terlalu panjang
 
-Margin standar (2–2.5 cm)
-
-Jenis huruf mudah dibaca (Times New Roman / Arial / Calibri)
-
-Ukuran 11–12 pt untuk isi
-
-Spasi 1.15 – 1.5
-
-Hindari paragraf terlalu panjang
-
-9️⃣ Objektivitas & inklusivitas
+9️. Objektivitas & inklusivitas
 
 UNESCO mendorong:
+1. Tidak menyinggung kelompok tertentu
+2. Hindari bahasa diskriminatif
+3. Gunakan istilah inklusif dan akademik
 
-Tidak menyinggung kelompok tertentu
-
-Hindari bahasa diskriminatif
-
-Gunakan istilah inklusif dan akademik
-
-🔟 Kualitas visual
+10. Kualitas visual
 
 Untuk buku SIG sangat relevan:
-
-Peta harus terbaca (label, legenda, skala)
-
-Warna tidak terlalu mencolok
-
-Gunakan north arrow (penunjuk arah)
-
-Gunakan standar legenda yang konsisten
+1. Peta harus terbaca (label, legenda, skala)
+2. Warna tidak terlalu mencolok
+3. Gunakan north arrow (penunjuk arah)
+4. Gunakan standar legenda yang konsisten
