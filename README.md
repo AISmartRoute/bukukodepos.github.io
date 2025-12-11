@@ -8,7 +8,7 @@ Anggota Kelompok
 4. Riska Rafiela Muslimah :
 5. Rizqi Akdam Kurnia :
 
-**MILESTONE 1** — Pengumpulan & Kurasi Materi (Satu Kali Saja)
+**MILESTONE 1** — Pengumpulan & Kurasi Materi (Satu Kali Saja) - done
 
 Tujuan: Semua referensi terkumpul sebelum mulai menulis atau ngoding.
 
@@ -35,7 +35,7 @@ Materi yang dikumpulkan:
 📌 Catatan:
 - Semua pengumpulan data dilakukan di awal saja, supaya tidak bolak-balik cari sumber.
 
-**MILESTONE 2** — Belajar & Mempraktikkan Konversi Data (Tidak diulang)
+**MILESTONE 2** — Belajar & Mempraktikkan Konversi Data (Tidak diulang) (done)
 
 Tujuan: Memahami teknik yang nanti dijelaskan di Bab 3 buku.
 
@@ -51,7 +51,7 @@ Langkah-langkah:
 - Bagian “mempelajari cara mengubah data” tidak diulang di milestone lain.
 - Nanti Bab 3 hanya menuliskan ulang hasil dari milestone ini, bukan mengulang kerja baru.
 
-**MILESTONE 3** — Menulis Isi Buku (Bab 1–6)
+**MILESTONE 3** — Menulis Isi Buku (Bab 1–6) (onproses)
 
 Milestone ini fokus pada penulisan, bukan lagi mencari data atau belajar ulang.
 
