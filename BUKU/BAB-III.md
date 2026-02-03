@@ -118,3 +118,22 @@ import fiona
 
 gdb_path = "RBI10K_ADMINISTRASI_DESA_20230928.gdb"
 fiona.listlayers(gdb_path)
+
+---
+
+### 3.3.3 Membaca Data Batas Desa ke dalam Python
+
+Setelah mengetahui layer yang dibutuhkan, langkah berikutnya adalah membaca data tersebut ke dalam Python agar dapat diolah lebih lanjut.
+
+Proses ini dilakukan menggunakan pustaka **GeoPandas**, yang memungkinkan data geospasial diperlakukan seperti tabel biasa, sambil tetap mempertahankan informasi bentuk wilayah.
+
+```python
+import geopandas as gpd
+
+layer = "ADMINISTRASI_AR_DESAKEL"
+
+gdf = gpd.read_file(
+    "RBI10K_ADMINISTRASI_DESA_20230928.gdb",
+    layer=layer
+)
+
