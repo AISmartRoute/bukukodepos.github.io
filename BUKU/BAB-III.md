@@ -118,7 +118,7 @@ import fiona
 
 gdb_path = "RBI10K_ADMINISTRASI_DESA_20230928.gdb"
 fiona.listlayers(gdb_path)
-
+```
 ---
 
 ### 3.3.3 Membaca Data Batas Desa ke dalam Python
@@ -136,4 +136,4 @@ gdf = gpd.read_file(
     "RBI10K_ADMINISTRASI_DESA_20230928.gdb",
     layer=layer
 )
-
+```
