@@ -1,6 +1,9 @@
 # bukukodepos.github.io
 Buku "Rahasia Dibalik Lima Angka" 
 
+<img width="470" height="668" alt="image" src="https://github.com/user-attachments/assets/45591046-e306-45d7-b636-ecadb4cb54c8" />
+
+
 Anggota Kelompok 
 1. Ady Chandra :
 2. Aset Mulyadi :
