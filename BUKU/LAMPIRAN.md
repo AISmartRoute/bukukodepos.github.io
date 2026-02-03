@@ -137,13 +137,15 @@ Visualisasi dilakukan dengan:
 Pendekatan ini bersifat eksploratif dan bertujuan memudahkan pembaca memahami relasi spasial antara wilayah dan kode pos.
 
 
-## Penjelasan Coding (Detail Blok Kode)
+## Deskripsi Coding Block
 
 Lampiran ini menyajikan **penjelasan rinci per blok koding** yang digunakan dalam proses pengolahan data geospasial. Fokusnya adalah menjelaskan **fungsi, alasan penggunaan, dan hasil** dari setiap blok kode, sehingga pembaca dapat menelusuri alur teknis secara sistematis.
 
 ---
 
 ## Logika 1 — Ekstraksi dan Penyederhanaan Data Batas Administrasi
+
+---
 
 ### Blok 1 — Membaca Struktur Geodatabase (GDB)
 
@@ -304,7 +306,9 @@ File `pekalonganClean.geojson` siap digunakan untuk kompilasi data.
 
 ---
 
-## Logika 2 — Akuisisi Data Atribut Kode Pos
+## Logika 2 — Akusisi Atribut Kode Pos
+
+---
 
 ### Blok 1 — Inisialisasi Library
 
@@ -315,12 +319,15 @@ import pandas as pd
 from io import StringIO
 ```
 
-**Penjelasan:**
-Menyiapkan pustaka untuk pengambilan data web dan pengolahan tabel.
+**Penjelasan**
+Blok ini memanggil library yang dibutuhkan untuk melakukan pengambilan data dari web dan mengelola tabel hasil scraping.
+
+**Hasil**
+Lingkungan Python siap digunakan untuk proses akuisisi data kode pos.
 
 ---
 
-### Blok 2 — Parameter Akses Website
+### Blok 2 — Penentuan Parameter Akses Website
 
 ```python
 base_url = "https://kodepos.posindonesia.co.id/CariKodepos"
@@ -328,19 +335,35 @@ payload = {"kodepos": "kab.pekalongan"}
 headers = {"User-Agent": "Mozilla/5.0"}
 ```
 
-**Penjelasan:**
-Menentukan endpoint pencarian, parameter wilayah, dan header agar permintaan diterima server.
+**Penjelasan**
+Blok ini mendefinisikan alamat endpoint pencarian kode pos, parameter wilayah studi, serta header agar permintaan dikenali sebagai akses dari browser.
+
+**Hasil**
+Parameter scraping siap digunakan untuk mengambil data kode pos dari website.
 
 ---
 
-### Blok 3 — Scraping Bertahap per Halaman
+### Blok 3 — Inisialisasi Penampung Data dan Informasi Paging
 
 ```python
 all_pages = []
 total_pages = 12
+```
 
+**Penjelasan**
+List disiapkan untuk menampung hasil scraping setiap halaman. Variabel `total_pages` menunjukkan jumlah halaman hasil pencarian yang perlu diambil.
+
+**Hasil**
+Struktur penampung data berhasil dibuat.
+
+---
+
+### Blok 4 — Proses Scraping Data per Halaman
+
+```python
 for page in range(1, total_pages + 1):
     params = {"page": page}
+
     resp = requests.post(
         base_url,
         data=payload,
@@ -350,68 +373,640 @@ for page in range(1, total_pages + 1):
 
     soup = BeautifulSoup(resp.text, "html.parser")
     table = soup.find("table")
+
+    if table is None:
+        continue
+
     df_page = pd.read_html(StringIO(str(table)))[0]
     all_pages.append(df_page)
 ```
 
-**Penjelasan:**
-Mengambil data kode pos dari setiap halaman hasil pencarian dan menyimpannya sementara.
+**Penjelasan**
+Blok ini melakukan pengambilan data secara berulang untuk setiap halaman hasil pencarian, mengekstrak tabel HTML, dan mengonversinya menjadi DataFrame.
+
+**Hasil**
+Data kode pos dari setiap halaman berhasil dikumpulkan dalam bentuk list DataFrame.
 
 ---
 
-### Blok 4 — Penggabungan & Penyimpanan Data
+### Blok 5 — Penggabungan Seluruh Hasil Scraping
 
 ```python
 df_kodepos = pd.concat(all_pages, ignore_index=True)
+```
+
+**Penjelasan**
+Seluruh DataFrame hasil scraping digabungkan menjadi satu dataset utuh.
+
+**Hasil**
+Terbentuk satu DataFrame kode pos wilayah Pekalongan.
+
+---
+
+### Blok 6 — Pemeriksaan Awal Data
+
+```python
+print("Jumlah baris:", len(df_kodepos))
+df_kodepos.head()
+```
+
+**Penjelasan**
+Blok ini digunakan untuk memastikan jumlah data dan struktur kolom sesuai dengan wilayah studi.
+
+**Hasil**
+Diperoleh dataset dengan **312 baris data**.
+
+---
+
+### Blok 7 — Penyimpanan Data Kode Pos
+
+```python
 df_kodepos.to_csv("kodepos_pekalongan.csv", index=False)
 ```
 
-**Hasil:**
-Terbentuk dataset kode pos Pekalongan dengan **312 baris**.
+**Penjelasan**
+Dataset kode pos disimpan dalam format CSV agar dapat digunakan kembali tanpa melakukan scraping ulang.
+
+**Hasil**
+File `kodepos_pekalongan.csv` berhasil dibuat dan siap digunakan pada proses kompilasi data spasial.
 
 ---
 
-## Logika 3 — Kompilasi Data Spasial–Atribut
+## Logika 3 — Validasi dan Kompilasi Data Spasial–Atribut
 
-### Blok — Penggabungan Data
+---
+
+### Blok 1 — Pemanggilan Data Atribut dan Spasial
 
 ```python
-gdf_final = gdf_spasial.merge(
-    df_kodepos[["kelurahan_clean", "kecamatan_clean", "kode_pos"]],
-    on=["kelurahan_clean", "kecamatan_clean"],
-    how="left"
+import pandas as pd
+import geopandas as gpd
+
+# data atribut kode pos
+df_kodepos = pd.read_csv("kodepos_pekalongan.csv")
+
+# data batas wilayah (geometri)
+gdf_batas = gpd.read_file("bataspekalongan.geojson")
+```
+
+**Penjelasan**
+Blok ini memuat dua dataset utama: data atribut kode pos (CSV) dan data batas wilayah (GeoJSON).
+
+**Hasil**
+Kedua dataset berhasil dimuat ke dalam DataFrame dan GeoDataFrame.
+
+---
+
+### Blok 2 — Pembentukan Kunci Gabungan Desa–Kecamatan
+
+```python
+# membuat key gabungan pada data kode pos
+df_kodepos["desa_kec"] = (
+    df_kodepos["desa_kelurahan"] + " | " + df_kodepos["kecamatan"]
+)
+
+# membuat key gabungan pada data batas wilayah
+gdf_batas["desa_kec"] = (
+    gdf_batas["desa_kelurahan"] + " | " + gdf_batas["kecamatan"]
 )
 ```
 
-**Penjelasan:**
-Menggabungkan data kode pos ke data batas wilayah berdasarkan kunci desa–kecamatan.
+**Penjelasan**
+Blok ini membentuk kunci penggabungan berbasis kombinasi nama desa/kelurahan dan kecamatan untuk menyamakan identitas wilayah.
+
+**Hasil**
+Kolom kunci `desa_kec` berhasil dibuat pada kedua dataset.
 
 ---
 
-## Logika 4 — Pembentukan Titik Centroid
+### Blok 3 — Pemeriksaan Jumlah Unit Wilayah
 
 ```python
-gdf_utm = gdf_kelurahan.to_crs(epsg=32749)
-gdf_utm["centroid"] = gdf_utm.geometry.centroid
-gdf_centroid = gdf_utm.set_geometry("centroid").to_crs(epsg=4326)
+print("Kodepos :", df_kodepos["desa_kec"].nunique())
+print("Batas   :", gdf_batas["desa_kec"].nunique())
 ```
 
-**Penjelasan:**
-Mengubah representasi polygon menjadi titik centroid untuk mempermudah pembacaan sebaran.
+**Penjelasan**
+Blok ini memeriksa jumlah unit wilayah unik pada masing-masing dataset sebelum proses penggabungan.
+
+**Hasil**
+Jumlah unit wilayah pada kedua dataset sama, yaitu **312**.
 
 ---
 
-## Logika 5 — Visualisasi Peta
+### Blok 4 — Deteksi Ketidaksesuaian Data
 
 ```python
+tidak_cocok_kodepos = (
+    df_kodepos[["desa_kec"]]
+    .drop_duplicates()
+    .merge(
+        gdf_batas[["desa_kec"]].drop_duplicates(),
+        on="desa_kec",
+        how="left",
+        indicator=True
+    )
+    .query("_merge == 'left_only'")
+)
+
+
+tidak_cocok_batas = (
+    gdf_batas[["desa_kec"]]
+    .drop_duplicates()
+    .merge(
+        df_kodepos[["desa_kec"]].drop_duplicates(),
+        on="desa_kec",
+        how="left",
+        indicator=True
+    )
+    .query("_merge == 'left_only'")
+)
+```
+
+**Penjelasan**
+Blok ini digunakan untuk mendeteksi desa–kecamatan yang hanya muncul pada salah satu dataset.
+
+**Hasil**
+Objek validasi berhasil dibuat untuk pengecekan kecocokan data.
+
+---
+
+### Blok 5 — Validasi Akhir Kesiapan Data
+
+```python
+if tidak_cocok_kodepos.empty and tidak_cocok_batas.empty:
+    print("✅ Semua data DESA–KECAMATAN cocok antara kodepos dan batas wilayah")
+```
+
+**Penjelasan**
+Blok ini memastikan tidak ada ketidaksesuaian data sebelum penggabungan dilakukan.
+
+**Hasil**
+Seluruh unit desa–kecamatan dinyatakan cocok.
+
+---
+
+### Blok 6 — Pemeriksaan Ketersediaan Kolom Kunci
+
+```python
+assert "desa_kec" in df_kodepos.columns
+assert "desa_kec" in gdf_batas.columns
+```
+
+**Penjelasan**
+Blok ini berfungsi sebagai pengaman untuk memastikan kolom kunci tersedia pada kedua dataset.
+
+**Hasil**
+Proses dapat dilanjutkan tanpa error.
+
+---
+
+### Blok 7 — Proses Penggabungan Data
+
+```python
+gdf_final = df_kodepos.merge(
+    gdf_batas[["desa_kec", "geometry"]],
+    on="desa_kec",
+    how="left"
+)
+
+gdf_final = gpd.GeoDataFrame(
+    gdf_final,
+    geometry="geometry",
+    crs=gdf_batas.crs
+)
+```
+
+**Penjelasan**
+Blok ini menggabungkan data atribut kode pos dengan geometri batas wilayah dan mengonversinya menjadi GeoDataFrame.
+
+**Hasil**
+Terbentuk GeoDataFrame hasil kompilasi data spasial–atribut.
+
+---
+
+### Blok 8 — Pemeriksaan Hasil Kompilasi
+
+```python
+print("Total baris:", len(gdf_final))
+print("Geometry kosong:", gdf_final.geometry.isna().sum())
+```
+
+**Penjelasan**
+Blok ini digunakan untuk memastikan seluruh baris data memiliki geometri yang valid.
+
+**Hasil**
+Jumlah baris **312** dan tidak terdapat geometri kosong.
+
+---
+
+### Blok 9 — Penyimpanan Data GeoJSON Final
+
+```python
+gdf_final.to_file(
+    "GIS_pekalongan.geojson",
+    driver="GeoJSON"
+)
+```
+
+**Penjelasan**
+Blok ini menyimpan hasil akhir kompilasi data ke dalam format GeoJSON.
+
+**Hasil**
+File `GIS_pekalongan.geojson` berhasil dibuat dan siap digunakan untuk analisis dan visualisasi lanjutan.
+
+---
+
+## Logika 4 — Representasi Titik Wilayah Menggunakan Centroid
+
+---
+
+### Blok 1 — Pemanggilan Library Geospasial
+
+```python
+import geopandas as gpd
+from shapely.ops import transform
+```
+
+**Penjelasan**
+Blok ini memanggil pustaka yang diperlukan untuk pengolahan data geospasial dan manipulasi geometri.
+
+**Hasil**
+Lingkungan pemrosesan geospasial siap digunakan.
+
+---
+
+### Blok 2 — Memuat Data Hasil Kompilasi
+
+```python
+# membaca data hasil kompilasi
+gdf_kel = gpd.read_file("GIS_pekalongan.geojson")
+```
+
+**Penjelasan**
+Blok ini memuat data geospasial hasil kompilasi kode pos dan batas wilayah yang telah dibuat pada tahap sebelumnya.
+
+**Hasil**
+Data geospasial Pekalongan berhasil dimuat ke dalam GeoDataFrame.
+
+---
+
+### Blok 3 — Penghapusan Dimensi Z pada Geometri
+
+```python
+# fungsi untuk menghapus dimensi Z
+def drop_z(geom):
+    if geom.has_z:
+        return transform(lambda x, y, z=None: (x, y), geom)
+    return geom
+
+# menerapkan fungsi pada seluruh geometri
+gdf_kel["geometry"] = gdf_kel.geometry.apply(drop_z)
+```
+
+**Penjelasan**
+Blok ini menghilangkan dimensi Z (ketinggian) pada geometri polygon untuk mencegah kesalahan pada proses reproyeksi dan perhitungan centroid.
+
+**Hasil**
+Seluruh geometri disederhanakan menjadi bentuk dua dimensi.
+
+---
+
+### Blok 4 — Reproyeksi ke Sistem Koordinat UTM
+
+```python
+# reproyeksi ke sistem koordinat UTM
+gdf_kel_utm = gdf_kel.to_crs(epsg=32749)
+```
+
+**Penjelasan**
+Data direproyeksikan ke sistem koordinat UTM agar perhitungan centroid dilakukan dalam satuan meter, sehingga hasilnya lebih akurat secara geometris.
+
+**Hasil**
+Data geospasial berada pada sistem koordinat UTM.
+
+---
+
+### Blok 5 — Perhitungan Titik Centroid
+
+```python
+# menghitung centroid polygon
+gdf_kel_utm["centroid"] = gdf_kel_utm.geometry.centroid
+```
+
+**Penjelasan**
+Blok ini menghitung titik centroid (titik tengah) dari setiap polygon desa/kelurahan.
+
+**Hasil**
+Kolom `centroid` berhasil ditambahkan ke GeoDataFrame.
+
+---
+
+### Blok 6 — Menetapkan Centroid sebagai Geometri Aktif
+
+```python
+# menjadikan centroid sebagai geometri aktif dan kembali ke WGS84
+gdf_centroid = (
+    gdf_kel_utm
+    .set_geometry("centroid")
+    .to_crs(epsg=4326)
+)
+```
+
+**Penjelasan**
+Blok ini menetapkan titik centroid sebagai geometri utama dan mengonversi kembali sistem koordinat ke WGS84 agar kompatibel dengan peta web dan GIS umum.
+
+**Hasil**
+Terbentuk GeoDataFrame berbentuk titik dengan koordinat lintang–bujur.
+
+---
+
+### Blok 7 — Normalisasi Atribut Teks
+
+```python
+kolom_teks = [
+    "desa_kelurahan",
+    "kecamatan",
+    "kota_kabupaten",
+    "provinsi",
+    "desa_kec"
+]
+
+for col in kolom_teks:
+    if col in gdf_centroid.columns:
+        gdf_centroid[col] = (
+            gdf_centroid[col]
+            .astype(str)
+            .str.upper()
+            .str.strip()
+        )
+```
+
+**Penjelasan**
+Blok ini menstandarkan penulisan atribut teks agar konsisten untuk keperluan visualisasi dan analisis lanjutan.
+
+**Hasil**
+Atribut teks telah dirapikan dan seragam.
+
+---
+
+### Blok 8 — Penyimpanan Data Titik Centroid
+
+```python
+gdf_centroid.to_file(
+    "centroidPekalongan.geojson",
+    driver="GeoJSON"
+)
+```
+
+**Penjelasan**
+Blok ini menyimpan data titik centroid ke dalam format GeoJSON.
+
+**Hasil**
+File `centroidPekalongan.geojson` berhasil dibuat dan siap digunakan untuk visualisasi dan analisis spasial sederhana.
+
+---
+
+## Logika 5 — Visualisasi Peta Interaktif 
+
+---
+
+### Blok 1 — Pemanggilan Library Visualisasi
+
+```python
+import geopandas as gpd
 import folium
-
-m = folium.Map(location=[center_lat, center_lon], zoom_start=12)
+import random
 ```
 
-**Penjelasan:**
-Membangun peta interaktif sebagai alat eksplorasi pola spasial.
+**Penjelasan**
+Blok ini memanggil pustaka yang digunakan untuk membaca data geospasial dan membangun peta interaktif.
+
+**Hasil**
+Lingkungan visualisasi peta siap digunakan.
 
 ---
 
-Lampiran ini dimaksudkan sebagai rujukan teknis. Pembaca tidak diwajibkan menjalankan seluruh kode, namun diharapkan dapat memahami **alur logika** di balik setiap langkah pemrosesan data.
+### Blok 2 — Memuat Data Polygon dan Titik
+
+```python
+gdf_kel = gpd.read_file("GIS_pekalongan.geojson")
+gdf_centroid = gpd.read_file("centroidPekalongan.geojson")
+
+gdf_centroid = gdf_centroid.rename_geometry("centroid")
+```
+
+**Penjelasan**
+Blok ini memuat data batas wilayah (polygon) dan data titik centroid. Nama kolom geometri pada data centroid diubah untuk membedakan dari geometri polygon.
+
+**Hasil**
+Data polygon dan titik siap digunakan dalam satu peta.
+
+---
+
+### Blok 3 — Penyamaan Sistem Koordinat (CRS)
+
+```python
+if gdf_kel.crs is None or gdf_kel.crs.to_epsg() != 4326:
+    gdf_kel = gdf_kel.to_crs(epsg=4326)
+
+if gdf_centroid.crs is None or gdf_centroid.crs.to_epsg() != 4326:
+    gdf_centroid = gdf_centroid.to_crs(epsg=4326)
+```
+
+**Penjelasan**
+Blok ini memastikan seluruh layer menggunakan sistem koordinat WGS84 agar dapat ditampilkan secara akurat pada peta web.
+
+**Hasil**
+Semua data berada pada sistem koordinat yang sama.
+
+---
+
+### Blok 4 — Menentukan Titik Pusat Peta
+
+```python
+center_lat = gdf_centroid.geometry.y.mean()
+center_lon = gdf_centroid.geometry.x.mean()
+```
+
+**Penjelasan**
+Titik pusat peta dihitung dari rata-rata posisi seluruh centroid wilayah.
+
+**Hasil**
+Peta terpusat secara otomatis pada wilayah studi.
+
+---
+
+### Blok 5 — Membuat Objek Peta Dasar
+
+```python
+m = folium.Map(
+    location=[center_lat, center_lon],
+    zoom_start=12,
+    tiles="OpenStreetMap"
+)
+```
+
+**Penjelasan**
+Blok ini membuat peta dasar interaktif menggunakan Folium.
+
+**Hasil**
+Peta dasar siap diisi layer spasial.
+
+---
+
+### Blok 6 — Penentuan Warna Kecamatan
+
+```python
+kecamatan_list = sorted(gdf_kel["kecamatan"].unique())
+
+warna_kecamatan = {
+    kec: "#{:06x}".format(random.randint(0, 0xFFFFFF))
+    for kec in kecamatan_list
+}
+```
+
+**Penjelasan**
+Setiap kecamatan diberi warna acak untuk memudahkan pembeda visual antarwilayah.
+
+**Hasil**
+Skema warna kecamatan berhasil dibuat.
+
+---
+
+### Blok 7 — Fungsi Style Batas Kelurahan
+
+```python
+def style_kelurahan(feature):
+    kec = feature["properties"]["kecamatan"]
+    return {
+        "fillColor": warna_kecamatan.get(kec, "lightgray"),
+        "color": "black",
+        "weight": 1,
+        "dashArray": "4,4",
+        "fillOpacity": 0.35
+    }
+```
+
+**Penjelasan**
+Blok ini mendefinisikan gaya visual batas kelurahan.
+
+**Hasil**
+Kelurahan memiliki tampilan warna dan garis yang konsisten.
+
+---
+
+### Blok 8 — Fungsi Style Batas Kecamatan
+
+```python
+def style_kecamatan(feature):
+    return {
+        "fillColor": "transparent",
+        "color": "black",
+        "weight": 2,
+        "fillOpacity": 0
+    }
+```
+
+**Penjelasan**
+Blok ini mendefinisikan gaya visual batas kecamatan sebagai batas administratif utama.
+
+**Hasil**
+Batas kecamatan tampil lebih tegas dibanding batas kelurahan.
+
+---
+
+### Blok 9 — Menambahkan Layer Batas Kelurahan
+
+```python
+folium.GeoJson(
+    gdf_kel,
+    name="Batas Kelurahan",
+    style_function=style_kelurahan,
+    highlight_function=lambda x: {
+        "fillColor": "white",
+        "color": "black",
+        "weight": 2,
+        "fillOpacity": 0.6
+    },
+    tooltip=folium.GeoJsonTooltip(
+        fields=["desa_kelurahan", "kecamatan"],
+        aliases=["Kelurahan:", "Kecamatan:"]
+    )
+).add_to(m)
+```
+
+**Penjelasan**
+Blok ini menambahkan layer polygon kelurahan beserta tooltip informasi.
+
+**Hasil**
+Batas kelurahan tampil interaktif dan informatif.
+
+---
+
+### Blok 10 — Menambahkan Layer Batas Kecamatan
+
+```python
+gdf_kecamatan = gdf_kel.dissolve(by="kecamatan").reset_index()
+
+folium.GeoJson(
+    gdf_kecamatan,
+    name="Batas Kecamatan",
+    style_function=style_kecamatan,
+    tooltip=folium.GeoJsonTooltip(
+        fields=["kecamatan"],
+        aliases=["Kecamatan:"]
+    )
+).add_to(m)
+```
+
+**Penjelasan**
+Polygon kelurahan digabung menjadi batas kecamatan untuk memperjelas hierarki wilayah.
+
+**Hasil**
+Layer batas kecamatan tampil rapi di atas peta.
+
+---
+
+### Blok 11 — Menambahkan Titik Centroid Kode Pos
+
+```python
+for _, row in gdf_centroid.iterrows():
+    lat = row["centroid"].y
+    lon = row["centroid"].x
+
+    folium.CircleMarker(
+        location=[lat, lon],
+        radius=3,
+        color="blue",
+        fill=True,
+        fill_color="blue",
+        fill_opacity=0.85,
+        popup=f"""
+        <b>KODE POS:</b> {row.get('kodepos','-')}<br>
+        <b>KELURAHAN:</b> {row.get('desa_kelurahan','-')}<br>
+        <b>KECAMATAN:</b> {row.get('kecamatan','-')}
+        """
+    ).add_to(m)
+```
+
+**Penjelasan**
+Blok ini menampilkan titik centroid kode pos sebagai marker interaktif.
+
+**Hasil**
+Sebaran kode pos dapat dibaca secara visual pada peta.
+
+---
+
+### Blok 12 — Kontrol Layer dan Tampilan Peta
+
+```python
+folium.LayerControl(collapsed=False).add_to(m)
+m
+```
+
+**Penjelasan**
+Blok ini menambahkan kontrol layer dan menampilkan peta interaktif.
+
+**Hasil**
+Peta interaktif lengkap siap digunakan untuk eksplorasi spasial.
