@@ -2,11 +2,12 @@
 <span>⬅️ <a href="bab-1.md">Bab I – Pendahuluan</a></span>
 <span><a href="bab-3.md">Bab III – Analisis Geospasial</a> ➡️</span>
 </div>
-
+<div align="justify">
+  
 # BAB II  
 ## Membaca Indonesia Melalui Peta dan Lima Angka
 
-### Ruang yang Membutuhkan Cara Baru untuk Dibaca
+### 2.1 Ruang yang Membutuhkan Cara Baru untuk Dibaca
 
 Indonesia bukan hanya luas—ia juga dinamis. Desa tumbuh menjadi kota, jalur sungai berubah, dan batas administratif bergeser mengikuti pertumbuhan penduduk. Di tengah perubahan itu, manusia membutuhkan alat untuk memahami bagaimana ruang bekerja dan bagaimana data tersebar di dalamnya.
 
@@ -18,16 +19,16 @@ SIG membantu kita membaca ruang bukan sebagai gambar, tetapi sebagai informasi: 
 
 ---
 
-## Apa Itu Sistem Informasi Geografis
+## 2.2 Apa Itu Sistem Informasi Geografis
 
 Sistem Informasi Geografis (SIG) berangkat dari gagasan sederhana: setiap fenomena yang memiliki lokasi dapat dipahami secara lebih mendalam jika diolah sebagai data. Melalui SIG, ruang bukan hanya tempat, tetapi kumpulan informasi yang dapat dibaca, dianalisis, dan diperbandingkan.
 
 Inti dari SIG adalah dua jenis data yang saling melengkapi.
 
-### Data Spasial
+### 1. Data Spasial
 Data spasial menggambarkan **di mana** sesuatu berada. Ia mencakup bentuk fisik wilayah—batas desa, jalur sungai, garis pantai, jaringan jalan, hingga kontur tanah. Dalam SIG, data spasial menjadi fondasi yang memberi struktur visual pada ruang.
 
-### Data Atribut
+### 2. Data Atribut
 Data atribut menjelaskan **apa** yang ada di lokasi tersebut: jumlah penduduk, fungsi bangunan, tingkat kepadatan, jenis lahan, hingga kode pos sebagai penanda administratif ringan.
 
 Atribut menambahkan konteks pada bentuk wilayah, sehingga kita bukan hanya melihat titik atau garis, tetapi memahami maknanya.
@@ -51,7 +52,7 @@ Dengan cara ini, SIG tidak sekadar menampilkan peta, tetapi *membacakan isi peta
 
 ---
 
-## Membaca Struktur Administratif Indonesia
+## 2.3 Membaca Struktur Administratif Indonesia
 
 Dalam SIG, kode pos adalah atribut yang menempel pada batas desa atau kelurahan. Namun statusnya sebagai atribut bukan berarti ia tidak penting—justru dari sinilah kita dapat membaca struktur ruang administratif Indonesia.
 
@@ -69,7 +70,7 @@ Jika atribut kode pos ditempelkan pada layer batas administrasi, SIG memungkinka
 - Daerah pegunungan memiliki sebaran kode pos yang lebih renggang
 - Kota besar memiliki tingkat detail kode pos lebih tinggi karena struktur ruangnya lebih kompleks
 
-### Contoh: Pekalongan dalam SIG
+#### Contoh: Pekalongan dalam SIG
 
 Melanjutkan pembacaan pada Bab I, Pekalongan memperlihatkan dua karakter ruang utama:
 
@@ -79,23 +80,25 @@ Melanjutkan pembacaan pada Bab I, Pekalongan memperlihatkan dua karakter ruang u
 - **Perbukitan selatan**  
   Desa tersebar mengikuti kontur, jarak antar-permukiman lebih jauh, dan rentang kode pos yang cenderung “melompat”.
 
-Ketika layer kode pos ditempelkan pada layer fisik dan administratif, SIG memperlihatkan hubungan antara angka, bentang alam, dan sejarah pertumbuhan wilayah. Dari sini, kode pos tampil sebagai representasi pola ruang, bukan sekadar angka administratif.
+Ketika layer kode pos ditempelkan pada layer fisik dan administratif, SIG memperlihatkan hubungan antara angka, bentang alam, dan sejarah pertumbuhan wilayah. 
+
+Dari sini, kode pos tampil sebagai representasi pola ruang, bukan sekadar angka administratif.
 
 ---
 
-## Sistem Informasi Geografis sebagai Kerangka Membaca Indonesia
+## 2.4 Sistem Informasi Geografis sebagai Kerangka Membaca Indonesia
 
-SIG memberi kita cara pandang baru terhadap Indonesia—bukan sebagai kumpulan nama provinsi atau garis pantai, melainkan sebagai ruang hidup yang tersusun dari relasi antara manusia, bentang alam, dan data.
+SIG memberi kita cara pandang baru terhadap Indonesia: bukan sebagai kumpulan nama provinsi, garis pantai, atau batas kecamatan, tetapi sebagai ruang hidup yang tersusun dari hubungan antara manusia, bentang alam, dan data. Ketika SIG bekerja, ia mengungkapkan bahwa setiap wilayah memiliki logikanya sendiri—logika yang sering kali tersembunyi di balik peta biasa.
 
-Melalui SIG, kita melihat bahwa pertumbuhan kota tidak pernah terjadi secara kebetulan. Pola permukiman mengikuti akses, air, dan kontur tanah. Jalan besar berperan sebagai tulang punggung ekonomi. Sungai tetap menjadi penentu arah perkembangan desa, bahkan di tengah modernisasi.
+Melalui SIG, kita dapat melihat bahwa pertumbuhan kota tidak pernah terjadi secara kebetulan. Pola permukiman mengikuti akses, air, dan kontur tanah. Jalan-jalan besar muncul sebagai tulang punggung pergerakan ekonomi. Sungai tetap menjadi penentu arah perkembangan desa, bahkan ketika bangunan-bangunan modern mulai berdiri.
 
-Dalam kerangka ini, kode pos bukan sekadar atribut administratif. Ia adalah pintu masuk menuju struktur ruang: cara pemerintah mengelompokkan wilayah, cara masyarakat membentuk pusat kegiatan, serta bagaimana identitas tempat terhubung dengan layanan dan aksesibilitas.
+Dalam kerangka ini, kode pos bukan sekadar atribut administratif. Ia adalah pintu memasuki struktur ruang: gambaran tentang bagaimana pemerintah mengelompokkan wilayah, bagaimana masyarakat membentuk pusat-pusat kegiatan, dan bagaimana identitas suatu tempat terikat pada jejaring layanan dan aksesibilitas.
 
-Ketika kode pos ditempatkan dalam SIG, angka-angka itu berinteraksi dengan layer lain—jalan, permukiman, dan batas desa—menciptakan pola yang mencerminkan realitas sosial dan geografis. Pekalongan, misalnya, menunjukkan bagaimana kode pos rapat di utara beririsan dengan jalur *Groote Postweg* dan pusat ekonomi batik, sementara sebaran longgar di selatan berpadu dengan kontur pegunungan dan lembah sungai.
+Ketika kode pos ditempatkan dalam SIG, angka-angka itu tidak lagi berdiri sendiri. Mereka berinteraksi dengan layer lain—jalan, permukiman, batas desa—menciptakan pola yang mencerminkan realitas sosial dan geografis. Pekalongan, misalnya, memperlihatkan bagaimana rentang kode pos yang rapat di utara beririsan dengan jalur Groote Postweg dan pusat ekonomi batik, sementara sebaran yang lebih longgar di selatan berpadu dengan kontur pegunungan dan permukiman yang mengikuti lembah-lembah sungai.
 
-SIG memungkinkan kita membaca cerita-cerita kecil ini dalam skala yang lebih luas: tentang wilayah yang tumbuh cepat, wilayah yang terhambat topografi, dan bagaimana layanan publik bekerja dalam struktur negara yang kompleks.
+SIG memungkinkan kita membaca cerita-cerita kecil ini dalam skala yang lebih luas: cerita tentang bagaimana wilayah terhubung, mana yang tumbuh cepat, mana yang terhambat oleh topografi, dan bagaimana layanan publik menjalankan perannya dalam struktur negara yang kompleks.
 
-Pada akhirnya, SIG mengajak kita melihat Indonesia bukan sebagai peta yang sudah jadi, tetapi sebagai ruang yang terus berubah—ruang yang dapat dipahami lebih baik ketika data, geografi, dan cerita manusia disatukan dalam satu kerangka analisis.
+Pada akhirnya, SIG mengajak kita melihat Indonesia bukan sebagai peta yang sudah jadi, tetapi sebagai ruang yang terus berubah—ruang yang dapat dipahami lebih baik ketika data, geografi, dan cerita manusia ditempatkan dalam satu kerangka analisis. Di sinilah peran SIG menjadi nyata: ia menyatukan fragmentasi informasi dan menjadikannya narasi ruang yang utuh. Dan dalam narasi itu, lima angka sederhana seperti kode pos menjadi salah satu benang kecil yang ikut merajut pemahaman kita tentang Indonesia.
 
 ---
 
@@ -121,6 +124,9 @@ Pada titik inilah angka—termasuk kode pos—berperan. Ia menempel pada peta, m
 
 Buku ini memandang SIG bukan sebagai teknologi pemetaan semata, melainkan sebagai **cara berpikir**:  
 cara menghubungkan bentuk wilayah dengan data, dan cara membaca Indonesia melalui relasi antar-ruang.
+
+</div>
+
 <div style="display:flex; justify-content:space-between;">
 <span>⬅️ <a href="bab-1.md">Bab I – Pendahuluan</a></span>
 <span><a href="bab-3.md">Bab III – Analisis Geospasial</a> ➡️</span>
