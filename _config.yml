@@ -1,10 +1,16 @@
+# Basic site info (dipakai minimal, tidak ditampilkan otomatis)
 title: Rahasia di Balik Lima Angka
 description: Kode Pos, Peta, dan Cerita Geospasial Indonesia
-author: Riska Rafiela Muslimah | Fajar Kurnia Rohman | Rizqi Akdam | Asep Mulyadi | Ady Chandra
 
-theme: minima
+# Markdown engine
 markdown: kramdown
 
+# Render markdown apa adanya
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Plugins minimal (hanya untuk link antar file)
 plugins:
   - jekyll-relative-links
 
@@ -12,7 +18,10 @@ relative_links:
   enabled: true
   collections: false
 
+# Matikan semua hal yang tidak perlu
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - vendor
