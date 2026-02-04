@@ -1,3 +1,8 @@
+<div style="display:flex; justify-content:space-between;">
+<span>⬅️ <a href="bab-2.md">Bab II – Kode Pos dan Wilayah</a></span>
+<span><a href="bab-3.md">Bab IV – Kode Pos dan Wilayah</a> ➡️</span>
+</div>
+
 # BAB 3
 ## Membangun Ruang Dari Angka : Praktik Mengubah Kode Pos Menjadi Data Geospasial
 
