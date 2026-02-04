@@ -18,12 +18,16 @@
     </a>
   </p>
 
-  <p align="center">
-    <strong style="font-size: 1.3em;">
-      Rahasia di Balik Lima Angka
-    </strong><br>
-    <em>Kode Pos, Peta, dan Cerita Geospasial Indonesia</em>
-  </p>
+<p align="center">
+  <strong style="font-size: 1.3em;">
+    Rahasia di Balik Lima Angka
+  </strong><br>
+  <em>Kode Pos, Peta, dan Cerita Geospasial Indonesia</em><br><br>
+  <small>
+    Ady Chandra · Asep Mulyadi · Fajar Kurnia Rohman ·
+    Riska Rafiela Muslimah · Rizqi Akdam Kurnia
+  </small>
+</p>
 
   <br>
 
