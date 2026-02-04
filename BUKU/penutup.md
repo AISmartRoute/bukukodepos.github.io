@@ -1,3 +1,10 @@
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="lampiran">Lampiran</a></span>
+<span><a href="mulai">Daftar Isi</a> ➡️</span>
+
+</div>
+
 # PENUTUP
 
 ## Membaca Ruang melalui Angka
@@ -13,3 +20,10 @@ Buku ini juga menekankan pentingnya cara merepresentasikan data. Data yang sama 
 Sebagai sebuah *handbook*, buku ini tidak bertujuan memberikan jawaban final atau model analisis yang kaku. Sebaliknya, buku ini menawarkan kerangka kerja praktis untuk membaca data administratif secara spasial, dengan tetap menyadari keterbatasan data dan metode yang digunakan. Pendekatan ini dapat diterapkan pada berbagai jenis data lain yang memiliki keterkaitan dengan wilayah, tidak terbatas pada kode pos atau layanan pos.
 
 Pada akhirnya, memahami ruang melalui angka adalah tentang melatih cara pandang. Dengan membaca peta secara kritis dan kontekstual, pembaca diajak untuk menyadari bahwa di balik angka-angka administratif terdapat struktur ruang, pola layanan, dan cerita tentang bagaimana wilayah dikelola. Kesadaran inilah yang diharapkan menjadi bekal utama bagi pembaca dalam menggunakan data geospasial—bukan hanya untuk memetakan, tetapi untuk memahami ruang secara lebih utuh.
+
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="lampiran">Lampiran</a></span>
+<span><a href="mulai">Daftar Isi</a> ➡️</span>
+
+</div>
