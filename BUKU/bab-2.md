@@ -52,7 +52,14 @@ Dalam SIG, kode pos adalah atribut yang menempel pada batas desa atau kelurahan.
 
 ### Kode Pos Indonesia sebagai Pola Administratif
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e92f6d43-90c2-468a-a6a9-75451ab9760c" />
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/e92f6d43-90c2-468a-a6a9-75451ab9760c"
+    alt="Struktur Administratif Indonesia"
+    width="600"
+  >
+</p>
+
 
 Lima digit kode pos mencerminkan hierarki wilayah:
 - Digit awal → rumpun provinsi  
