@@ -1010,3 +1010,5 @@ Blok ini menambahkan kontrol layer dan menampilkan peta interaktif.
 
 **Hasil**
 Peta interaktif lengkap siap digunakan untuk eksplorasi spasial.
+<img width="732" height="438" alt="image" src="https://github.com/user-attachments/assets/2a322084-eaca-4401-946b-6dc8fcf47c9d" />
+
