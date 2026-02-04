@@ -1,13 +1,14 @@
-# Buku "Rahasia Dibalik 5 Angka" – Draft
+# Rahasia di Balik Lima Angka
+## Kode Pos, Peta, dan Cerita Geospasial Indonesia
 
-Selamat datang di buku digital ini.
+---
 
-## Daftar Isi
-- [COVER](COVER.md).
-- [BAB 1 - KODE POS, RUANG, DAN CERITA GEOSPASIAL](BAB-I.md)
-- [BAB 2 - MEMBACA INDONESIA MELALUI PETA DAN LIMA ANGKA](BAB-II.md)
-- [BAB 3 - MEMBANGUN RUANG DARI ANGKA: PRAKTIK MENGUBAH KODE POS MENJADI DATA GEOSPASIAL](BAB-III.md)
-- [BAB 4 - KETIKA PETA MULAI BERCERITA](BAB-IV.md)
-- [BAB 5](BAB-V.md)
-- [PENUTUP](BAB-VI.md)
-- [LAMPIRAN](LAMPIRAN.md)
+### 📘 Daftar Isi
+- [Cover](buku/cover.md)
+- [Bab I – Pendahuluan](buku/bab-1.md)
+- [Bab II – Kode Pos dan Wilayah](buku/bab-2.md)
+- [Bab III – Analisis Geospasial](buku/bab-3.md)
+- [Bab IV – Studi Kasus](buku/bab-4.md)
+- [Bab V – Pembahasan](buku/bab-5.md)
+- [Lampiran](buku/lampiran.md)
+- [Penutup](buku/penutup.md)
