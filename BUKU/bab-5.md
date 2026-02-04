@@ -1,3 +1,10 @@
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="bab-4">Bab IV – Memaknai Pola: Kode Pos, Layanan, dan Ruang</a></span>
+<span><a href="Lampiran">Lampiran</a> ➡️</span>
+
+</div>
+
 # BAB V
 
 ## Memaknai Pola: Kode Pos, Layanan, dan Ruang
@@ -79,3 +86,11 @@ Dalam konteks handbook, bab ini memberikan kerangka pemahaman praktis tentang ba
 Pola spasial membantu kita melihat keteraturan, tetapi makna selalu memerlukan kehati-hatian. Peta menuntut kita untuk bertanya: apa arti pola ini, dan sejauh mana ia boleh dimaknai?
 
 Bab ini menegaskan bahwa kekuatan SIG tidak terletak pada kemampuan memberi jawaban pasti, melainkan pada kemampuannya membantu menafsirkan ruang secara bertanggung jawab.
+
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="bab-4">Bab IV – Memaknai Pola: Kode Pos, Layanan, dan Ruang</a></span>
+<span><a href="Lampiran">Lampiran</a> ➡️</span>
+
+</div>
+
