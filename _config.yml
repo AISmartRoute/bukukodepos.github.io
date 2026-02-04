@@ -1,3 +1,18 @@
-theme: jekyll-theme-cayman
 title: Rahasia di Balik Lima Angka
 description: Kode Pos, Peta, dan Cerita Geospasial Indonesia
+author: Riska Rafiela Muslimah | Fajar Kurnia Rohman | Rizqi Akdam | Asep Mulyadi | Ady Chandra
+
+theme: minima
+markdown: kramdown
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
