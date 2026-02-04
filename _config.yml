@@ -1,9 +1,6 @@
 # Site identity
 title: Rahasia di Balik Lima Angka
 description: Kode Pos, Peta, dan Cerita Geospasial Indonesia
-author:
-  name: Riska Rafiela Muslimah
-  email: ""
 
 # Base URL (WAJIB kalau pakai repo project pages)
 baseurl: "/bukukodepos.github.io"
