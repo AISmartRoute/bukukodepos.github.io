@@ -1,24 +1,52 @@
-# Basic site info (dipakai minimal, tidak ditampilkan otomatis)
+# Site identity
 title: Rahasia di Balik Lima Angka
 description: Kode Pos, Peta, dan Cerita Geospasial Indonesia
+author:
+  name: Riska Rafiela Muslimah
+  email: ""
 
-# Markdown engine
+# Base URL (WAJIB kalau pakai repo project pages)
+baseurl: "/bukukodepos.github.io"
+url: "https://bukukodepos.github.io"
+
+# Theme (fungsi lengkap: header, footer, render stabil)
+theme: minima
+
+# Markdown
 markdown: kramdown
-
-# Render markdown apa adanya
 kramdown:
   input: GFM
   hard_wrap: false
 
-# Plugins minimal (hanya untuk link antar file)
+# Plugins
 plugins:
   - jekyll-relative-links
+  - jekyll-feed
+  - jekyll-seo-tag
 
 relative_links:
   enabled: true
   collections: false
 
-# Matikan semua hal yang tidak perlu
+# Header navigation (INI YANG BIKIN KAYA)
+header_pages:
+  - BUKU/bab-1.md
+  - BUKU/bab-2.md
+  - BUKU/bab-3.md
+  - BUKU/bab-4.md
+  - BUKU/bab-5.md
+  - BUKU/lampiran.md
+  - BUKU/penutup.md
+
+# Defaults (supaya semua halaman konsisten)
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      show_excerpts: false
+
+# Exclude yang tidak perlu
 exclude:
   - README.md
   - Gemfile
