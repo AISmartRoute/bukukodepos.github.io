@@ -4,7 +4,7 @@
 ---
 
 ### 📘 Daftar Isi
-- [Cover](buku/cover.md)
+- [Cover](BUKU/cover.md)
 - [Bab I – Pendahuluan](buku/bab-1.md)
 - [Bab II – Kode Pos dan Wilayah](buku/bab-2.md)
 - [Bab III – Analisis Geospasial](buku/bab-3.md)
