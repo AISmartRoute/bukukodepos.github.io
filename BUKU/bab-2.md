@@ -1,9 +1,3 @@
-<div style="display:flex; justify-content:space-between;">
-<span>⬅️ <a href="bab-1.md">Bab I – Pendahuluan</a></span>
-<span><a href="bab-3.md">Bab III – Analisis Geospasial</a> ➡️</span>
-</div>
-<div align="justify">
-  
 # BAB II  
 ## Membaca Indonesia Melalui Peta dan Lima Angka
 
@@ -125,10 +119,4 @@ Pada titik inilah angka—termasuk kode pos—berperan. Ia menempel pada peta, m
 Buku ini memandang SIG bukan sebagai teknologi pemetaan semata, melainkan sebagai **cara berpikir**:  
 cara menghubungkan bentuk wilayah dengan data, dan cara membaca Indonesia melalui relasi antar-ruang.
 
-</div>
-
-<div style="display:flex; justify-content:space-between;">
-<span>⬅️ <a href="bab-1.md">Bab I – Pendahuluan</a></span>
-<span><a href="bab-3.md">Bab III – Analisis Geospasial</a> ➡️</span>
-</div>
 
