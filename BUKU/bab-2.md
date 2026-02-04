@@ -1,3 +1,10 @@
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="bab-1">Bab I – Kode Pos, Ruang, dan Cerita Geospasial</a></span>
+<span><a href="bab-3">Bab III – Membangun Ruang Dari Angka : Praktik Mengubah Kode Pos Menjadi Data Geospasial</a> ➡️</span>
+
+</div>
+
 # BAB II  
 ## Membaca Indonesia Melalui Peta dan Lima Angka
 
@@ -122,6 +129,13 @@ SIG bekerja ketika kita mulai bertanya lebih jauh:
 apa arti garis ini, mengapa titik-titik itu berkumpul, dan apa yang tersembunyi di balik pola sebarannya.
 
 Pada titik inilah angka—termasuk kode pos—berperan. Ia menempel pada peta, memberi konteks, dan mengubah ruang dari sekadar gambar menjadi informasi yang dapat dibaca.
+
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="bab-1">Bab I – Kode Pos, Ruang, dan Cerita Geospasial</a></span>
+<span><a href="bab-3">Bab III – Membangun Ruang Dari Angka : Praktik Mengubah Kode Pos Menjadi Data Geospasial</a> ➡️</span>
+
+</div>
 
 Buku ini memandang SIG bukan sebagai teknologi pemetaan semata, melainkan sebagai **cara berpikir**:  
 cara menghubungkan bentuk wilayah dengan data, dan cara membaca Indonesia melalui relasi antar-ruang.
