@@ -81,11 +81,30 @@ Dalam konteks handbook, bab ini memberikan kerangka pemahaman praktis tentang ba
 4. Apa risiko utama jika pola visual langsung ditafsirkan sebagai hubungan sebab–akibat?
 5. Menurutmu, apa peran utama peta dalam kajian geospasial?
 
+>**Penting !**
+
+>Pola spasial membantu kita melihat keteraturan, tetapi makna selalu memerlukan kehati-hatian.
+>Dalam SIG, membaca peta berarti memahamiapa yang ditunjukkan, apa yang disederhanakan,dan apa yang sengaja tidak dibaca.
+
 ---
 
-Pola spasial membantu kita melihat keteraturan, tetapi makna selalu memerlukan kehati-hatian. Peta menuntut kita untuk bertanya: apa arti pola ini, dan sejauh mana ia boleh dimaknai?
+Peta tidak lagi sekadar menunjukkan pola.
+Ia menuntut kita untuk berhenti dan bertanya:
+apa arti pola ini, dan sejauh mana ia boleh dimaknai?
 
-Bab ini menegaskan bahwa kekuatan SIG tidak terletak pada kemampuan memberi jawaban pasti, melainkan pada kemampuannya membantu menafsirkan ruang secara bertanggung jawab.
+Sebaran kode pos dan layanan memperlihatkan keteraturan,
+namun keteraturan tersebut bukanlah hukum alam.
+Ia lahir dari keputusan administratif, kebutuhan layanan, dan kompromi pengelolaan wilayah.
+
+Membaca pola spasial berarti menerima bahwa tidak semua kedekatan menunjukkan hubungan,
+dan tidak semua jarak menandakan keterpisahan.
+Peta membantu kita melihat indikasi,
+tetapi makna selalu lahir dari konteks.
+
+Bab ini mengingatkan bahwa kekuatan SIG tidak terletak pada kemampuan memberi jawaban pasti,
+melainkan pada kemampuannya membantu kita
+menafsirkan ruang dengan hati-hati dan bertanggung jawab.
+
 
 <div style="display:flex; justify-content:space-between;">
 
