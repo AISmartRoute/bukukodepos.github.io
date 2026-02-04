@@ -1,14 +1,19 @@
-# Rahasia di Balik Lima Angka
-## Kode Pos, Peta, dan Cerita Geospasial Indonesia
+<p align="center">
+  <a href="BUKU/cover.md">
+    <img
+      src="https://github.com/user-attachments/assets/e13b6ab4-8718-4dab-987b-7bb3926c6d92"
+      alt="Cover Rahasia di Balik Lima Angka"
+      width="150"
+    />
+  </a>
+</p>
 
----
+<p align="center">
+  <strong>Rahasia di Balik Lima Angka</strong><br>
+  <em>Kode Pos, Peta, dan Cerita Geospasial Indonesia</em>
+</p>
 
-### 📘 Daftar Isi
-- [Cover](BUKU/cover.md)
-- [Bab I – Pendahuluan](BUKU/bab-1.md)
-- [Bab II – Kode Pos dan Wilayah](BUKU/bab-2.md)
-- [Bab III – Analisis Geospasial](BUKU/bab-3.md)
-- [Bab IV – Studi Kasus](BUKU/bab-4.md)
-- [Bab V – Pembahasan](BUKU/bab-5.md)
-- [Lampiran](BUKU/lampiran.md)
-- [Penutup](BUKU/penutup.md)
+<p align="center">
+  📖 <strong><a href="BUKU/cover.md">Mulai Membaca</a></strong>📖
+</p>
+
