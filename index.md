@@ -7,7 +7,7 @@
   );
   padding: 60px 20px;
 ">
-
+  
   <p align="center">
     <a href="BUKU/cover.md">
       <img
@@ -32,11 +32,4 @@
   </p>
 
   <br>
-  <hr style="
-    width: 40%;
-    border: none;
-    height: 1px;
-    background-color: #ffb6c1;
-  ">
-
 </div>
