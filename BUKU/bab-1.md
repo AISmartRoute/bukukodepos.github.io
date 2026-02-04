@@ -1,8 +1,11 @@
 
 <div style="display:flex; justify-content:space-between;">
-<span>⬅️ <a href="cover.md">Cover</a></span>
-<span><a href="bab-2.md">Bab II – Kode Pos dan Wilayah</a> ➡️</span>
+
+<span>⬅️ <a href="mulai">Daftar Isi</a></span>
+<span><a href="bab-2">Bab II – Membaca Indonesia Melalui Peta dan Lima Angka</a> ➡️</span>
+
 </div>
+
 
 # BAB I  
 ## Kode Pos, Ruang, dan Cerita Geospasial
@@ -100,7 +103,8 @@ Buku ini berangkat dari intuisi sederhana itu:
 **jika angka dapat memberi petunjuk tentang ruang, maka ruang dapat dibaca ulang melalui angka.**
 
 <div style="display:flex; justify-content:space-between;">
-<span>⬅️ <a href="cover.md">Cover</a></span>
-<span><a href="bab-2.md">Bab II – Kode Pos dan Wilayah</a> ➡️</span>
-</div>
 
+<span>⬅️ <a href="mulai">Daftar Isi</a></span>
+<span><a href="bab-2">Bab II – Membaca Indonesia Melalui Peta dan Lima Angka</a> ➡️</span>
+
+</div>
