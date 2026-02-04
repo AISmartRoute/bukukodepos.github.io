@@ -31,21 +31,12 @@
     📖 <strong><a href="BUKU/cover.md">Masuk ke Cerita</a></strong>
   </p>
 
-  <br><br>
-
+  <br>
   <hr style="
     width: 40%;
     border: none;
     height: 1px;
     background-color: #ffb6c1;
   ">
-
-  <p align="center">
-    <small style="color: #555;">
-      Peta bukan kebenaran tunggal,<br>
-      melainkan hasil dari data, metode,<br>
-      dan keputusan yang kita ambil.
-    </small>
-  </p>
 
 </div>
