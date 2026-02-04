@@ -1,3 +1,9 @@
+
+<div style="display:flex; justify-content:space-between;">
+<span>⬅️ <a href="cover.md">Cover</a></span>
+<span><a href="bab-2.md">Bab II – Kode Pos dan Wilayah</a> ➡️</span>
+</div>
+
 # BAB I  
 ## Kode Pos, Ruang, dan Cerita Geospasial
 
@@ -92,3 +98,9 @@ Dari lima angka itu saja, sebenarnya sudah muncul banyak petunjuk—apakah wilay
 
 Buku ini berangkat dari intuisi sederhana itu:  
 **jika angka dapat memberi petunjuk tentang ruang, maka ruang dapat dibaca ulang melalui angka.**
+
+<div style="display:flex; justify-content:space-between;">
+<span>⬅️ <a href="cover.md">Cover</a></span>
+<span><a href="bab-2.md">Bab II – Kode Pos dan Wilayah</a> ➡️</span>
+</div>
+
