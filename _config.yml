@@ -1,16 +1,27 @@
-title: "Judul Buku Kamu"
-description: "Buku digital berbasis GitHub Pages"
-author: "Nama Kamu"
+# Basic site info (dipakai minimal, tidak ditampilkan otomatis)
+title: Rahasia di Balik Lima Angka
+description: Kode Pos, Peta, dan Cerita Geospasial Indonesia
 
-theme: jekyll-theme-cayman
-
+# Markdown engine
 markdown: kramdown
 
+# Render markdown apa adanya
 kramdown:
   input: GFM
   hard_wrap: false
 
-show_downloads: false
-
+# Plugins minimal (hanya untuk link antar file)
 plugins:
-  - jekyll-feed
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
+
+# Matikan semua hal yang tidak perlu
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
