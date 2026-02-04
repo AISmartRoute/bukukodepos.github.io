@@ -1,7 +1,7 @@
 <div style="display:flex; justify-content:space-between;">
 
 <span>⬅️ <a href="bab-4">Bab IV – Ketika Peta Mulai Bercerita</a></span>
-<span><a href="Lampiran">Lampiran</a> ➡️</span>
+<span><a href="lampiran">Lampiran</a> ➡️</span>
 
 </div>
 
@@ -90,7 +90,7 @@ Bab ini menegaskan bahwa kekuatan SIG tidak terletak pada kemampuan memberi jawa
 <div style="display:flex; justify-content:space-between;">
 
 <span>⬅️ <a href="bab-4">Bab IV – Ketika Peta Mulai Bercerita</a></span>
-<span><a href="Lampiran">Lampiran</a> ➡️</span>
+<span><a href="lampiran">Lampiran</a> ➡️</span>
 
 </div>
 
