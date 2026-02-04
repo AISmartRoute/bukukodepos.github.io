@@ -1,52 +1,16 @@
-# Site identity
-title: Rahasia di Balik Lima Angka
-description: Kode Pos, Peta, dan Cerita Geospasial Indonesia
+title: "Judul Buku Kamu"
+description: "Buku digital berbasis GitHub Pages"
+author: "Nama Kamu"
 
-# Base URL (WAJIB kalau pakai repo project pages)
-baseurl: "/bukukodepos.github.io"
-url: "https://bukukodepos.github.io"
+theme: jekyll-theme-cayman
 
-# Theme (fungsi lengkap: header, footer, render stabil)
-theme: minima
-
-# Markdown
 markdown: kramdown
+
 kramdown:
   input: GFM
   hard_wrap: false
 
-# Plugins
+show_downloads: false
+
 plugins:
-  - jekyll-relative-links
   - jekyll-feed
-  - jekyll-seo-tag
-
-relative_links:
-  enabled: true
-  collections: false
-
-# Header navigation (INI YANG BIKIN KAYA)
-header_pages:
-  - BUKU/bab-1.md
-  - BUKU/bab-2.md
-  - BUKU/bab-3.md
-  - BUKU/bab-4.md
-  - BUKU/bab-5.md
-  - BUKU/lampiran.md
-  - BUKU/penutup.md
-
-# Defaults (supaya semua halaman konsisten)
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: page
-      show_excerpts: false
-
-# Exclude yang tidak perlu
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
