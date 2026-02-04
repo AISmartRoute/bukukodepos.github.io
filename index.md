@@ -32,7 +32,7 @@
   <br>
 
   <p align="center">
-    📖 <strong><a href="BUKU/index.md"> Mulai Membaca </a></strong> 📖 
+    📖 <strong><a href="BUKU/mulai.md"> Mulai Membaca </a></strong> 📖 
   </p>
 
   <br>
