@@ -1,3 +1,10 @@
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="bab-5">Bab V – Memaknai Pola: Kode Pos, Layanan, dan Ruang</a></span>
+<span><a href="penutup">Penutup</a> ➡️</span>
+
+</div>
+
 # LAMPIRAN
 
 ## Penjelasan Coding
@@ -1011,4 +1018,11 @@ Blok ini menambahkan kontrol layer dan menampilkan peta interaktif.
 **Hasil**
 Peta interaktif lengkap siap digunakan untuk eksplorasi spasial.
 <img width="732" height="438" alt="image" src="https://github.com/user-attachments/assets/2a322084-eaca-4401-946b-6dc8fcf47c9d" />
+
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="bab-5">Bab V – Memaknai Pola: Kode Pos, Layanan, dan Ruang</a></span>
+<span><a href="penutup">Penutup</a> ➡️</span>
+
+</div>
 
