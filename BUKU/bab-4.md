@@ -1,3 +1,10 @@
+<div style="display:flex; justify-content:space-between;">
+
+<span>⬅️ <a href="bab-3">Bab III – Praktik Mengubah Kode Pos Menjadi Data Geospasial</a></span>
+<span><a href="bab-5">Bab V – Memaknai Pola: Kode Pos, Layanan, dan Ruang</a> ➡️</span>
+
+</div>
+
 # BAB IV
 
 ## Ketika Peta Mulai Bercerita
