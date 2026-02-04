@@ -12,7 +12,7 @@
 
 ---
 
-## Jejak Alamat dan Narasi di Baliknya
+## 1.1 Jejak Alamat dan Narasi di Baliknya
 
 Setiap alamat muncul dari latar ruang yang panjang. Sebuah rumah dapat berdiri di ujung jalan karena dahulu terdapat aliran air yang membentuk jalur permukiman. Sebuah kelurahan menjadi padat karena aktivitas pasar tumbuh dan menetap di sana. Sebuah kota berkembang karena menjadi titik singgah perjalanan manusia selama berabad-abad.
 
@@ -22,7 +22,7 @@ Dalam administrasi modern, kode pos bukan hanya penanda tempat, tetapi fondasi p
 
 ---
 
-## Peta Tersembunyi dalam Lima Angka
+## 1.2 Peta Tersembunyi dalam Lima Angka
 
 Coba bayangkan sejenak: bagaimana caranya lima angka bisa menceritakan sebuah negara?
 
@@ -49,7 +49,7 @@ Jika setiap orang memiliki kisahnya sendiri, maka lima digit ini adalah pintu me
 
 ---
 
-## Pekalongan: Ruang yang Dibentuk Sejarah dan Geografi
+## 1.3 Pekalongan: Ruang yang Dibentuk Sejarah dan Geografi
 
 Kabupaten Pekalongan menghadirkan contoh yang jelas tentang bagaimana ruang terbentuk melalui interaksi antara sejarah dan kondisi alam. Perkembangan wilayah ini menunjukkan bagaimana aktivitas manusia, jaringan transportasi, dan karakter bentang alam membentuk pola permukiman yang kita lihat hari ini.
 
@@ -63,7 +63,7 @@ Pekalongan, melalui lanskap dan pola pertumbuhannya, memperlihatkan bagaimana se
 
 ---
 
-## Ketika Kode Pos Menjadi Informasi Geospasial
+## 1.4 Ketika Kode Pos Menjadi Informasi Geospasial
 
 Kode pos pada dasarnya hanyalah lima digit angka. Namun di balik kesederhanaannya, lima angka ini membawa petunjuk tentang bagaimana ruang diatur, bagaimana permukiman tumbuh, dan bagaimana wilayah saling terhubung.
 
