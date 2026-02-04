@@ -1,8 +1,3 @@
----
-layout: default
-title: Rahasia di Balik Lima Angka
----
-
 # Rahasia di Balik Lima Angka
 ## Kode Pos, Peta, dan Cerita Geospasial Indonesia
 
