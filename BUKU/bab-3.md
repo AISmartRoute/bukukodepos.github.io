@@ -49,7 +49,14 @@ Menyimpan hasilnya sebagai dataset geospasial baru.
 
 Urutan ini menjadi kerangka kerja yang akan diikuti sepanjang Bab 3, dengan setiap langkah dibahas secara bertahap pada subbab berikutnya.
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d3e92ad9-37de-4640-becf-9616c30ae39e" />
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/d3e92ad9-37de-4640-becf-9616c30ae39e"
+    alt="Gambaran Umum Proses"
+    width="600"
+  >
+</p>
+
 
 
 ## 3.2 Menyiapkan Lingkungan Kerja
@@ -68,7 +75,14 @@ Jupyter Notebook memungkinkan kode dijalankan secara bertahap, dengan hasil yang
 
 Bagi yang belum memiliki Python di komputer pribadi, Python dapat dipasang melalui distribusi seperti Anaconda, atau digunakan secara daring melalui layanan seperti Google Colab. Dengan pilihan ini, proses belajar tidak bergantung pada spesifikasi perangkat tertentu.
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3e3e384-47cd-4393-ac40-373b81f31672" />
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/a3e3e384-47cd-4393-ac40-373b81f31672"
+    alt="Media Kerja Python"
+    width="600"
+  >
+</p>
+
 
 
 ### 3.2.2 Pustaka Python yang Digunakan
