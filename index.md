@@ -31,6 +31,9 @@
 
   <br>
 
-📖 **[Mulai Membaca](BUKU/mulai.md)** 📖
+<p align="center">
+  📖 <strong><a href="BUKU/mulai">Mulai Membaca</a></strong> 📖
+</p>
+
   <br>
 </div>
