@@ -1,16 +1,17 @@
-# Basic site info (dipakai minimal, tidak ditampilkan otomatis)
+# Basic site info
 title: Rahasia di Balik Lima Angka
 description: Kode Pos, Peta, dan Cerita Geospasial Indonesia
+lang: id-ID
 
 # Markdown engine
 markdown: kramdown
 
-# Render markdown apa adanya
 kramdown:
   input: GFM
   hard_wrap: false
+  auto_ids: true
 
-# Plugins minimal (hanya untuk link antar file)
+# Plugins minimal (aman di GitHub Pages)
 plugins:
   - jekyll-relative-links
 
@@ -18,9 +19,8 @@ relative_links:
   enabled: true
   collections: false
 
-# Matikan semua hal yang tidak perlu
+# Exclude hanya file teknis
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
   - node_modules
