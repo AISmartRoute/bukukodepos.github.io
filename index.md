@@ -32,8 +32,7 @@
   <br>
 
   <p align="center">
-    📖 <strong><a href="BUKU/mulai.md"> Mulai Membaca </a></strong> 📖 
+    📖 <strong> **[Mulai Membaca](BUKU/mulai.md)**</strong> 📖 
   </p>
-
   <br>
 </div>
